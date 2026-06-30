@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: TrasactionExtractor
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/textr
+    driver-class-name: org.postgresql.Driver
+
+server:
+  port: 8081
+
+openai:
+  chat-model: "gpt-5.4-mini"
+  embedding-model: "text-embedding-3-large"

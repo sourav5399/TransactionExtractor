@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    username: your_db_username
+    password: your_db_password
+
+openai:
+  api-key: "your-openai-api-key-here"
