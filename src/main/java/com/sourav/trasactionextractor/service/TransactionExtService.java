@@ -63,7 +63,10 @@ public class TransactionExtService {
         String today = LocalDate.now().toString();
         String promptTemplate = String.format(
                 "Today's date is %s. Examine the provided context fragments and identify all financial transactions " +
-                        "that took place strictly within the last 3 days. Output them sequentially from oldest to newest. Output should be a list of transactions with from, amount, to, time. " +
+                        "that took place strictly within the last 3 days. Output them sequentially from oldest to newest. " +
+                        "Each transaction must include: from, to, amount (always positive), time, and type. " +
+                        "Set type to CREDIT for money received into the account (deposits, incoming transfers, refunds). " +
+                        "Set type to DEBIT for money paid out from the account (purchases, outgoing transfers, withdrawals). " +
                         "If no transactions match, clearly state that none were found.",
                 today
         );

@@ -24,5 +24,8 @@ public class TransactionResponse {
         
         @JsonProperty("time")
         public String time;
+
+        @JsonProperty("type")
+        public String type;
     }
 }
